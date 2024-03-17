@@ -1,0 +1,150 @@
+@import url("https://cdn.jsdelivr.net/gh/sun-typeface/SUITE/fonts/static/woff2/SUITE.css");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+.top-div {
+  position: relative;
+}
+/* ------------------------------------------------------ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  background-color: black;
+  color: black;
+}
+/* ------------------------------------------------------ */
+
+.to-top-of-page-btn {
+  position: fixed;
+  bottom: 5%;
+  right: 4%;
+
+  height: 50px;
+  width: 50px;
+  z-index: 9997;
+
+  cursor: pointer;
+}
+
+.arrow-to-top {
+  user-select: none;
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  background-color: black;
+  margin-top: 60;
+}
+
+.main > section {
+  color: white;
+  width: 100%;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+.se1-bg {
+  background-color: tomato;
+  min-height: 100vh;
+}
+
+.se2-bg {
+  background-color: white;
+  min-height: 100vh;
+}
+
+.se3-bg {
+  background-color: #fcfcfc;
+  min-height: 100vh;
+}
+
+.se4-bg {
+  background-color: skyblue;
+  min-height: 100vh;
+}
+
+.se5-bg {
+  background-color: skyblue;
+  min-height: 100vh;
+}
+
+.se6-bg {
+  background-color: tomato;
+  min-height: 100vh;
+}
+.background-image-div {
+  width: 100%; /* div의 너비를 100%로 설정 */
+  height: 60vh; /* div의 기본 높이를 설정 (원하는 값으로 조절) */
+  margin-bottom: 0;
+  background-image: url("../image-sourses/pexels-google-deepmind-18069157.png"); /* 사용할 이미지 경로 설정 */
+
+  background-size: cover; /* 이미지를 div에 맞게 조절 */
+  background-position: center; /* 이미지를 가운데 정렬 */
+  text-align: center;
+  position: relative;
+}
+
+.image-contents {
+  position: absolute;
+  top: 45%; /* 원하는 위치로 조절하세요 */
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.image-first-text {
+  color: black; /* 텍스트 색상 */
+  font-size: 45px; /* 큰거텍스트 크기 */
+  margin: 0;
+  font-family: pretendard;
+}
+
+.image-second-text {
+  color: black; /* 텍스트 색상 */
+  font-size: 20px; /* 작은거텍스트 크기 */
+  margin: 0;
+  padding-left: 10px;
+  text-align: left;
+  font-family: pretendard;
+}
+.image-btn-link {
+  display: block;
+  height: 35px;
+  width: 100px;
+  margin-top: 28px; /* 원하는 위치로 조절하세요 */
+  margin-left: 53px;
+  transform: translate(-50%, -50%);
+}
+
+.image-btn-link :hover {
+  cursor: pointer;
+}
+
+.image-btn-link:hover .ask-btn {
+  background-color: #e4e3de;
+  transition: background-color 0.3s ease; /* 0.3초 동안 서서히 변화, 원하는 시간으로 조절 가능 */
+}
+
+.ask-btn {
+  border-radius: 25px;
+  border-style: solid;
+  border-width: 2px;
+  height: 100%;
+  width: 100%;
+
+  font-weight: 800;
+  font-size: 13px;
+  font-family: pretendard;
+}
+
+.top-div:hover ~ .arrow-to-top {
+  src: format(
+    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAAAAXNSR0IArs4c6QAAAp1JREFUeF7t21FOwzAQBNDtzeBkwMmAkwGWUhW1TTxZz9qbeCLxxeI6rzuNbeBiuqgCF+poGswESm4CgQqULEAeTh0qULIAeTh1qEDJAuTh1KECJQuQh1OHCpQsQB5OHToh6JuZvSxf72b2QTagDpe9Qz8XyPubTjvvtBMzs9KZpSOfXV9m9kptLdJgWUFLxEt3bl0p555yUn/d+QM2TLr5p5vQ0pmlQ5ErXfSzgSJRv4cun6UFNsWVCdSDeUVMcx9pJrIz6s+6McW9pJjEstasPdVrkU6x6M8A2hL1dAv+DKBru6FaR659f+g9DX3xym7ICzo0+iNBmVFPE/2RoOyop0AdBbp18OGN+v3PDdlFjQCNjPrwLh0Bih58sDq16z12fTHCbsiD3DX6PUF7Rn3YAUov0JGYXQ9QeoFGL5HQj4Lw+w1/AdLBBwpWqwvfRUWDZoh616VUNGiWqHdDjQTtsRuqRXzt+2HRjwLNGPUuXRoFmjXq4agRoJmjHn6AwgY9QtRDu5QN2vvgw/tQCkNlgh7lc/PZm0A7QGGBHjHqIQcoDNAzYNIOUBigR446/S9QWkHP1J1X3KZdVAvoGTGbo98CeraoU5ZSXtAj7Ya8a1VX9D2gZ456c5d6QM8e9SbUvaAzRL3pAGUP6ExRd3fpHtCjHnx4H0ouVBR0ts9N9wEKAjpz1HcfoNRAhfnYq5tmNVBF/RF08+y0Bjr7g2jtgbbqJlDfGsANOuNCvkbcFPkyuGJ/I67+7qkW+f/vVunWma9v5L+e94DOjAnfu0BhKqxQoJgTXCVQmAorFCjmBFcJFKbCCgWKOcFVAoWpsEKBYk5wlUBhKqxQoJgTXCVQmAorFCjmBFcJFKbCCgWKOcFVAoWpsEKBYk5w1S8hXUxVB/xk4wAAAABJRU5ErkJggg=="
+  );
+}

@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contact-us-main-window {
+  /* 전체 컨택트 창에 대한 스타일 */
+  border-radius: 25px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: black;
+  width: 55vw;
+  height: 68vh;
+  min-height: 370px;
+  min-width: 315px;
+  max-height: 80vh;
+  color: black;
+  background-color: white;
+
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+}
+
+form {
+  /* 폼 스타일 */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label,
+.change-to-email {
+  user-select: none;
+}
+
+.contact-form {
+  /* 컨택트 폼 스타일 */
+  height: 80%;
+}
+
+.form-username-and-email {
+  /* 사용자 이름과 이메일 입력란을 감싸는 스타일 */
+  display: flex;
+  width: 80%;
+}
+
+.username-div,
+.useremail-div {
+  /* 사용자 이름과 이메일 입력란에 대한 스타일 */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 300px;
+  margin-left: 20px;
+  margin-top: 5vw;
+}
+
+input[type="text"],
+input[type="email"] {
+  /* 입력 필드 스타일 */
+  color: #222222;
+  width: 90%;
+  border: none;
+  border-bottom: solid #aaaaaa 1px;
+  position: relative;
+  background: none;
+  z-index: 5;
+
+  font-family: Pretendard;
+  font-weight: 700;
+}
+
+input::placeholder {
+  /* 입력 필드 플레이스홀더 스타일 */
+  color: #aaaaaa;
+}
+input:focus {
+  /* 입력 필드 포커스 스타일 */
+  outline: none;
+}
+
+input[type="text"]:focus ~ .username-label,
+input[type="text"]:valid ~ .username-label,
+input[type="email"]:focus ~ .email-label,
+input[type="email"]:valid ~ .email-label {
+  /* 입력 필드 포커스 상태 및 입력값이 있는 경우의 라벨 스타일 */
+  font-size: 16px;
+  bottom: 20px;
+  color: #666;
+  font-weight: bold;
+}
+
+.username-div input:focus ~ .underline-span,
+.useremail-div input:focus ~ .underline-span {
+  /* 입력 필드 포커스 상태의 하단 밑줄 스타일 */
+  width: 90%;
+}
+
+.useremail-div input:valid ~ .underline-span,
+.username-div input:valid ~ .underline-span {
+  width: 90%;
+}
+
+.underline-span {
+  /* 하단 밑줄 스타일 */
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  background-color: #666;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  transition: 0.5s;
+}
+
+.sumit-and-noti {
+  /* 제출 및 알림 영역 스타일 */
+  display: flex;
+}
+
+.message-div {
+  /* 메시지 영역 스타일 */
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6vh;
+}
+
+.message-window {
+  /* 메시지 창 스타일 */
+  width: 90%;
+  height: 120px;
+  margin-top: 5%;
+  resize: none;
+  border: none;
+  border-bottom: solid #aaaaaa 1px;
+
+  justify-content: center;
+
+  overflow: scroll;
+  overflow-y: scroll; /* 텍스트 내용이 높이를 초과할 경우 스크롤바를 표시 */
+  resize: vertical; /* 수직 리사이즈를 허용하여 높이 조절이 가능하게 함 */
+}
+
+textarea {
+  /* 텍스트 영역 스타일 */
+  width: 100%;
+  height: 100%;
+
+  font-family: Pretendard;
+  font-weight: bold;
+}
+
+.message-inner-div {
+  /* 메시지 내부 영역 스타일 */
+  width: 100%;
+  margin-left: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.message-text {
+  /* 메시지 텍스트 스타일 */
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 3%;
+
+  transition: 0.6s all;
+  color: #aaa;
+}
+
+.ui-space-up-textarea {
+  height: 18px;
+}
+
+#username-label-id {
+  font-size: medium;
+}
+
+#email-label-id {
+  font-size: medium;
+}
+
+.focused-class {
+  position: absolute;
+  font-size: 13px;
+  font-family: Pretendard;
+  bottom: 25px;
+  color: #666;
+  font-weight: bold;
+  transition: all 0.4s;
+}
+
+.unfocused-class {
+  position: absolute;
+  color: #aaa;
+  font-size: 15px;
+  font-family: Pretendard;
+  transition: all 0.4s;
+  bottom: 4px;
+}
+
+/* -------------------------------- */
+
+textarea:focus {
+  outline: none;
+}
+
+textarea::placeholder {
+  user-select: none;
+}
+
+.message-underline-span {
+  /* 하단 밑줄 스타일 */
+  /* position: absolute;*/
+
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  transition: 0.5s;
+  transform-origin: left center; /* 변형의 기준점을 좌측 중앙으로 설정 */
+  transform: scaleX(0); /* 초기에는 가로로 0으로 축소된 상태 */
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  display: block;
+}
+
+.message-inner-div textarea:focus ~ .message-underline-span,
+.message-inner-div textarea:valid ~ .message-underline-span {
+  /* 입력 필드 포커스 상태의 하단 밑줄 스타일 */
+  width: 90%;
+  transform: scaleX(1);
+  background-color: #666;
+  height: 2px;
+}
+
+.message-inner-div:focus-within .message-text {
+  color: #666; /* focus 상태일 때의 색상 */
+  font-weight: bold;
+}
+
+.message-text-valided {
+  color: #666; /* focus 상태일 때의 색상 */
+  font-weight: bold;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 3%;
+}
+
+/* --------------------------------------------- */
+
+.submit-and-noti-div {
+  margin-top: 4%;
+  width: 80%;
+  position: relative;
+  align-items: center;
+}
+
+.submit-and-noti {
+  margin-top: 6%;
+  width: 90%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  min-height: 20px;
+
+  position: relative;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.succeed-noti {
+  position: absolute;
+  left: 0;
+}
+
+.submit-btn {
+  position: absolute;
+  right: 4%;
+
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  background: none;
+  width: 27%;
+  height: 35%;
+
+  font-family: Pretendard;
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: all 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #dbdbdb;
+  cursor: pointer;
+}
+
+.ui-space-under-sumit-and-noti {
+  width: 20px;
+  height: 40px;
+}
+
+.nextToSendButton-div {
+  font-family: Pretendard;
+  font-weight: bold;
+  font-size: 20px;
+
+  position: relative;
+}
+
+.change-to-email {
+  font-size: 14px;
+
+  position: absolute;
+  bottom: 88%;
+}

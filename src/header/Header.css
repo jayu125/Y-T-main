@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+nav {
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+}
+
+.header {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.header-logo-div {
+  display: flex;
+  align-items: center;
+  margin-left: 90px; /* 추가: 로고와 왼쪽 사이드 간격 조절 */
+}
+
+.header-menus {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 120px; /* 추가: 메뉴와 오른쪽 사이드 간격 조절 */
+}
+
+.header-index {
+  display: flex;
+  gap: 55px; /*menu 들 사이의 간격 조절*/
+  align-items: center;
+  font-family: "pretendar", sans-serif;
+  font-size: medium;
+}
+
+.header-line {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menus-content {
+  display: flex;
+  align-items: center;
+  cursor: default; /* 변경: 마우스 오버 시 기본 커서로 설정하여 변경을 없앰 */
+  user-select: none; /* 변경: 텍스트 선택 방지 */
+}
+
+.nav-menu {
+  margin-top: 17px;
+  cursor: default; /* 변경: 마우스 오버 시 기본 커서로 설정하여 변경을 없앰 */
+  user-select: none; /* 변경: 텍스트 선택 방지 */
+  cursor: pointer;
+}
+
+.nav-text {
+  cursor: pointer;
+}
+
+.for-underline {
+  height: 1px;
+  width: 100%;
+  background-color: black;
+  margin-top: 5px;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+}
+
+a:hover .for-underline {
+  transform: scaleX(1);
+}
+
+.header-content:hover {
+  cursor: pointer;
+}
+
+a {
+  width: 65px;
+  height: 100%;
+  text-align: center;
+  color: black;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  .header {
+    width: 100%; /* 예시: 작은 화면일 때 헤더에 패딩 추가 */
+  }
+
+  .header-logo-div {
+    margin-left: 10px; /* 예시: 로고와 왼쪽 간격 조절 */
+  }
+
+  .header-menus {
+    margin-right: 10px; /* 예시: 메뉴와 오른쪽 간격 조절 */
+  }
+
+  .header-index {
+    gap: 5px; /* 예시: 메뉴 간격 조절 */
+  }
+  .header-logo-div {
+    align-items: center;
+  }
+}

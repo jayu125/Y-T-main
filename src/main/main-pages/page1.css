@@ -1,0 +1,62 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+.page1-under {
+  background-color: #f9fafb;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  align-items: center;
+  height: 60vh;
+  position: relative;
+}
+
+.page1-under-h {
+  display: flex;
+  justify-content: center;
+  font-family: pretendar;
+  font-weight: 800;
+  font-size: 22px;
+
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.page1-under-h-text {
+  color: black;
+}
+
+.page1-under-text-for-flex {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.page1-under-texts {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.page1-under-text-1,
+.page1-under-text-2,
+.page1-under-text-3 {
+  color: black;
+
+  font-family: pretendar;
+  font-weight: 800;
+  font-size: 25px;
+}
+
+.page1-under-text-1 {
+  margin-left: 17%;
+}
+
+.page1-under-text-3 {
+  margin-right: 17%;
+}
+
+.whole-page {
+  height: 100%;
+}

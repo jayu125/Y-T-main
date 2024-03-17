@@ -1,0 +1,7 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+.toast {
+  font-family: pretendard;
+  user-select: none;
+  font-size: 17px;
+}
