@@ -4,7 +4,7 @@ import HeaderStyle from "./Header.css";
 function Header() {
   return (
     <nav>
-      <div className="header">
+      <div className="header" role="banner">
         <div className="header-logo-div">
           <div className="header-logo">(logo)</div>
         </div>

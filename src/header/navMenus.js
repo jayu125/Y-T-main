@@ -5,7 +5,9 @@ const NavMenus = ({ text, to }) => {
     <Link to={to} style={{ textDecoration: "none" }}>
       <div className="header-content">
         <div className="nav-menu">
-          <span className="nav-text">{text}</span>
+          <span className="nav-text" role="tab">
+            {text}
+          </span>
         </div>
         <div className="for-underline"></div>
       </div>

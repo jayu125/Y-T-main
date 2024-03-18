@@ -102,6 +102,7 @@ export const ContactUs = () => {
           className="contact-form"
           ref={form}
           onSubmit={sendEmail}
+          role="article"
         >
           <div className="form-username-and-email">
             <div className="username-div">
